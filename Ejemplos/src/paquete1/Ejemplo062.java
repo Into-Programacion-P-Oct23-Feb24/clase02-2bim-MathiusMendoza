@@ -22,25 +22,29 @@ public class Ejemplo062 {
         int dato;
         // arreglo de tipo entero
         int[] arreglo1 = new int[7];
-        
+
         // Se asigna valores al arreglo, pidiendo valores por teclado
         // se usa un ciclo repetitivo
         for (int i = 0; i < arreglo1.length; i++) {
-        
+
             System.out.println("Ingrese un valor para el arreglo");
             dato = entrada.nextInt();
+            if (dato < 5 || dato == 10 || dato == 12 || dato > 14) {
+                dato = 5;
+            } // asi podemos asignar ciertos datos a la pocicon del arreglo 
+             // con ayuda de restricciones.
             // se asigna la variable dato a la posición del arreglo
             // de acuerdo al valor de i
             arreglo1[i] = dato;
-            
+
         }
-        
+
         // Se hace uso del ciclo repetitivo for para recorrer el arreglo
         for (int i = 0; i < arreglo1.length; i++) {
             System.out.printf("Subíndice o Índice %d, con valor %d\n",
                     i, arreglo1[i]);
         }
-        
+
     }
 
 }
